@@ -12,8 +12,8 @@
 
 //below is example of use strict
 //Q - passing an argument to iffy.. look into this
-(function(foo){
-  'use strict';
+// (function(foo){
+//   'use strict';
 
 
-}(window.foo = window.foo || {});
+// }(window.foo = window.foo || {});
