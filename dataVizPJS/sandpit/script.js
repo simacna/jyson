@@ -55,17 +55,18 @@ function studentGrades(data, passThreshold = 60, meritThreshold=75){
 // studentGrades(studentData);
 
 function processStudentData(data, passThreshold, meritThreshold){
-    passThreshold = typeof passThreshold !== 'undefined'? passThreshold: 60;
-    meritThreshold = typeof meritThreshold !== 'undefined'? meritThreshold: 75;
+    // passThreshold = typeof passThreshold !== 'undefined'? passThreshold: 60;
+    // meritThreshold = typeof meritThreshold !== 'undefined'? meritThreshold: 75;
+    console.log("passThreshold", passThreshold);
 
     // Q - how does sdata know that data is what's being passed?
     data.forEach(function(sdata){
-      console.log("sdata", sdata);
+      
         var av = sdata.scores.reduce(function(prev, current){
             return prev+current;
         },0) / sdata.scores.length;
         sdata.average = av;
-
+        console.log("sdata", sdata);
         if(av > meritThreshold){
             sdata.assessment = 'passed with merit';
         }
@@ -83,10 +84,15 @@ function processStudentData(data, passThreshold, meritThreshold){
 
 }
 
-processStudentData(studentData, 60, 75);
+// processStudentData(studentData, 60, 75);
+
+var cars = ["Saab", "Volvo", "BMW"];
+cars.prototype.cars = function(){
+  alert("yo");
+}
 
 
-
+var test = new cars();
 
 
 

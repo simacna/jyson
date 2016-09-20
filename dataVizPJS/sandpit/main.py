@@ -1,3 +1,4 @@
+import logging
 student_data = [
     {'name': 'Bob', 'id':0, 'scores':[68, 75, 56, 81]},
     {'name': 'Alice', 'id':1,  'scores':[75, 90, 64, 88]},
@@ -23,5 +24,6 @@ def process_student_data(data, pass_threshold=60, merit_threshold=75):
       sdata['name'], sdata['id'], sdata['assessment'].upper()))
 
 
-if __name__ == '__main__':
-  process_student_data(student_data)
+# if __name__ == '__main__':
+#   pass
+  # process_student_data(student_data)
