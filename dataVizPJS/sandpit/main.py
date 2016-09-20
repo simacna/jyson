@@ -6,6 +6,7 @@ student_data = [
     {'name': 'Dan', 'id':3, 'scores':[64, 58, 53, 62]},
 ]
 
+# print student_data[0]['name']
 def process_student_data(data, pass_threshold=60, merit_threshold=75):
   """ Perform some basic stats on student data. """
 
@@ -23,7 +24,20 @@ def process_student_data(data, pass_threshold=60, merit_threshold=75):
     print("%s's (id: %d) final assessment is: %s" %(
       sdata['name'], sdata['id'], sdata['assessment'].upper()))
 
+logger = logging.getLogger(__name__)
+logger.debug("Some useful debugging output")
+logger.info("Some general information")
 
+logging.basicConfig(level=logging.DEBUG)
 # if __name__ == '__main__':
 #   pass
   # process_student_data(student_data)
+
+
+
+
+
+
+
+
+
