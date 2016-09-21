@@ -34,6 +34,29 @@ logging.basicConfig(level=logging.DEBUG)
   # process_student_data(student_data)
 
 
+class Citizen(object):
+  def __init__(self, name, country):
+    self.name = name
+    self.country = country
+
+  def print_details(self):
+    print('Citizen %s from %s' % (self.name, self.country))
+
+
+c = Citizen('Sina', 'US')
+c.print_details()
+
+class Winner(Citizen):
+  def __init__(self, name, country, category, year):
+    self.category = category
+    self.year = year
+
+  def print_details(self):
+    print("Nobel winner %s from %s, category %s, year %s"  
+      % (self.name, self.country, self.category, self.year))
+
+winner = Winner(c, 'chem', 1990)
+winner.print_details()
 
 
 
