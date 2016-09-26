@@ -55,7 +55,8 @@ class Winner(Citizen):
     print("Nobel winner %s from %s, category %s, year %s"  
       % (self.name, self.country, self.category, self.year))
 
-winner = Winner(c, 'chem', 1990)
+# winner = Winner(c, 'sina', 'chem', 1990)
+winner = Winner
 winner.print_details()
 
 
