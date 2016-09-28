@@ -34,6 +34,7 @@ logging.basicConfig(level=logging.DEBUG)
   # process_student_data(student_data)
 
 
+#why is object being passed below
 class Citizen(object):
   def __init__(self, name, country):
     self.name = name
@@ -42,12 +43,24 @@ class Citizen(object):
   def print_details(self):
     print('Citizen %s from %s' % (self.name, self.country))
 
+# class Citizen():
+#   def __init__(self, name, country):
+#     self.name = name
+#     self.country = country
+
+#   def print_details(self):
+#     print('Citizen %s from %s' % (self.name, self.country))
 
 c = Citizen('Sina', 'US')
-c.print_details()
+# c.print_details() #output is same as if 'object' passed into
+#citizen class..? double check this
 
 class Winner(Citizen):
   def __init__(self, name, country, category, year):
+    #super method scales inheritance tree one branch from its
+    #argument, supplying the second as instance to the class-instance
+    #method
+    super(Winner, self).__init__(name, country)
     self.category = category
     self.year = year
 
@@ -56,7 +69,8 @@ class Winner(Citizen):
       % (self.name, self.country, self.category, self.year))
 
 # winner = Winner(c, 'sina', 'chem', 1990)
-winner = Winner
+# winner = Winner(c, 'sina', 'chem', 1990) -  what is c?
+winner = Winner("Sina", "US", "chem", 1990)
 winner.print_details()
 
 
