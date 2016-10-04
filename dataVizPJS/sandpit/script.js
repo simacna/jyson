@@ -94,6 +94,14 @@ cars.prototype.cars = function(){
 
 var test = new cars();
 
+var function = Citizen(name, country){
+  this.name = name;
+  this.country = country;
+}
+
+Citizen.prototype.print_details = function(){
+  console.log("Citizen " + this.name + " from " + this.country)
+}
 
 
 
