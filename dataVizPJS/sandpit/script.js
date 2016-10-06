@@ -57,16 +57,22 @@ function studentGrades(data, passThreshold = 60, meritThreshold=75){
 function processStudentData(data, passThreshold, meritThreshold){
     // passThreshold = typeof passThreshold !== 'undefined'? passThreshold: 60;
     // meritThreshold = typeof meritThreshold !== 'undefined'? meritThreshold: 75;
-    console.log("passThreshold", passThreshold);
+    // console.log("passThreshold", passThreshold);
 
     // Q - how does sdata know that data is what's being passed?
     data.forEach(function(sdata){
-      
+      // console.log('sdata outloop', sdata)
+      //above returns 'sdata' > Object {name: "Bob", id: 0, scores: Array[4]}
+
+
+        //reduce() method reduces an array to a single value      
         var av = sdata.scores.reduce(function(prev, current){
             return prev+current;
         },0) / sdata.scores.length;
         sdata.average = av;
-        console.log("sdata", sdata);
+        // console.log("sdata", sdata); output is scores per person 
+        //[68, 75, 76, 81]
+        console.log("sdata.scores", sdata.scores);
         if(av > meritThreshold){
             sdata.assessment = 'passed with merit';
         }
@@ -84,17 +90,17 @@ function processStudentData(data, passThreshold, meritThreshold){
 
 }
 
-// processStudentData(studentData, 60, 75);
+processStudentData(studentData, 60, 75);
 
-var cars = ["Saab", "Volvo", "BMW"];
-cars.prototype.cars = function(){
-  alert("yo");
-}
+// var cars = ["Saab", "Volvo", "BMW"];
+// cars.prototype.function = car(){
+//   alert("yo");
+// }
 
 
 var test = new cars();
 
-var function = Citizen(name, country){
+var Citizen = function(name, country){
   this.name = name;
   this.country = country;
 }
