@@ -90,7 +90,7 @@ function processStudentData(data, passThreshold, meritThreshold){
 
 }
 
-processStudentData(studentData, 60, 75);
+// processStudentData(studentData, 60, 75);
 
 // var cars = ["Saab", "Volvo", "BMW"];
 // cars.prototype.function = car(){
@@ -98,7 +98,7 @@ processStudentData(studentData, 60, 75);
 // }
 
 
-var test = new cars();
+// var test = new cars();
 
 var Citizen = function(name, country){
   this.name = name;
@@ -109,6 +109,11 @@ Citizen.prototype.print_details = function(){
   console.log("Citizen " + this.name + " from " + this.country)
 }
 
+var g = new Citizen('Groucho', "USA");
+var h = new Citizen('harpo', 'haRPLANDIA');
+
+g.print_details();
+g.print_details.call(h);
 
 
 
