@@ -118,7 +118,7 @@ Citizen.prototype = {
     console.log("Citizen " + this.name + ' from ' + this.country);
   }
 };
-console.log(typeof(Citizen)) //function
+// console.log(typeof(Citizen)) //function
 
 //above code, when ran with variable/calling function will have
 //desired output
@@ -134,8 +134,30 @@ var h = new Citizen('harpo', 'haRPLANDIA');
 // g.print_details.call(h);
 
 
+var Citizen2 = {
+  setCitizen: function(name, country){
+    this.name = name;
+    this.country = country;
+    return this; //why
+    //answer: 
+  },
+  printDetails: function(){
+    console.log('Citizen ' + this.name + ' from ' + this.country);
+  }
+}
 
+console.log(typeof(Citizen2)); //object
 
+var winner = Object.create(Citizen2);
+// winner.setCitizen('Sina', 'US');
+// winner.printDetails();
+
+winner.prototype = function(name, country, category, year){
+  this.Citizen2(name, country); //how is it passing paramaters to the class?
+  this.category = category;
+  this.year = year;
+  return this; 
+}
 
 
 
