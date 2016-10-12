@@ -105,15 +105,33 @@ var Citizen = function(name, country){
   this.country = country;
 }
 
-Citizen.prototype.print_details = function(){
-  console.log("Citizen " + this.name + " from " + this.country)
-}
+
+// Citizen.prototype.print_details = function(){
+//   console.log("Citizen " + this.name + " from " + this.country)
+// }
+
+//above code, when ran with variable/calling function will have
+//desired output. Although 'correct' naming of function would be camelcase
+
+Citizen.prototype = {
+  printDetails: function(){
+    console.log("Citizen " + this.name + ' from ' + this.country);
+  }
+};
+console.log(typeof(Citizen)) //function
+
+//above code, when ran with variable/calling function will have
+//desired output
+
+
+var usa = new Citizen('sina', 'us');
+// usa.printDetails();
 
 var g = new Citizen('Groucho', "USA");
 var h = new Citizen('harpo', 'haRPLANDIA');
 
-g.print_details();
-g.print_details.call(h);
+// g.print_details();
+// g.print_details.call(h);
 
 
 
