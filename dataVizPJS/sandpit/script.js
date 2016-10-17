@@ -139,25 +139,62 @@ var Citizen2 = {
     this.name = name;
     this.country = country;
     return this; //why
-    //answer: 
+    //answer: object chaining
   },
   printDetails: function(){
     console.log('Citizen ' + this.name + ' from ' + this.country);
   }
 }
 
-console.log(typeof(Citizen2)); //object
+// console.log(typeof(Citizen2)); //object
 
-var winner = Object.create(Citizen2);
-// winner.setCitizen('Sina', 'US');
-// winner.printDetails();
+var Winner = Object.create(Citizen2);
+// Winner.setCitizen('Sina', 'US');
+// Winner.printDetails();
 
-winner.prototype = function(name, country, category, year){
+Winner.setWinner = function(name, country, category, year){
   this.Citizen2(name, country); //how is it passing paramaters to the class?
   this.category = category;
   this.year = year;
   return this; 
 }
+
+Winner.printDetails = function(){
+  console.log("Nobel winner " + this.name + ' from ' +
+    this.country + ' , category' + this.category + ' , year' + this.year);
+}
+
+var albert = Object.create(Winner).setWinner('Albert', 'Switzerland', 'Physics', '1923');
+
+// albert.printDetails();
+
+//data chaining, used heavily in d3
+
+
+
+var sel = d3.select("#viz")
+          .attr('width', '600px')
+          .attr('height', '400px')
+          .style('background', 'lightgray');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
