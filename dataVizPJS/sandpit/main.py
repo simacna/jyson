@@ -75,7 +75,7 @@ winner.print_details()
 
 #tuple unpacking
 
-(a,b) = (b,a)
+# (a,b) = (b,a)
 
 def fib(n):
   x, y = 0, 1
@@ -89,11 +89,13 @@ winner = 'Sina', 'Physics', 1921, 'Swiss'
 
 name, _, _, nationality = winner
 
+#collections module
 
+from collections import Counter, defaultdict, OrderedDict
 
-
-
-
+#Counter..counters! ex below:
+items = ['F', 'C', 'C', 'A', 'B', 'A', 'C', 'E', 'F']
+count = Counter(items) #Counter({'C': 3, 'A': 2, 'F': 2, 'B': 1, 'E': 1})
 
 
 
