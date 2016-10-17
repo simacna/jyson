@@ -73,6 +73,31 @@ class Winner(Citizen):
 winner = Winner("Sina", "US", "chem", 1990)
 winner.print_details()
 
+#tuple unpacking
+
+(a,b) = (b,a)
+
+def fib(n):
+  x, y = 0, 1
+  for i in range(n):
+    print(x)
+    x, y = y, x + y
+ 
+'''to ignore one of the unpacked variables, use underscore'''
+
+winner = 'Sina', 'Physics', 1921, 'Swiss'
+
+name, _, _, nationality = winner
+
+
+
+
+
+
+
+
+
+
 
 
 

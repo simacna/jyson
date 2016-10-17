@@ -153,7 +153,8 @@ var Winner = Object.create(Citizen2);
 // Winner.printDetails();
 
 Winner.setWinner = function(name, country, category, year){
-  this.Citizen2(name, country); //how is it passing paramaters to the class?
+  // this.Citizen2(name, country); //how is it passing paramaters to the class?
+  //ps above throws 'Uncaught TypError: this.citizen2 is not a function'
   this.category = category;
   this.year = year;
   return this; 
@@ -178,7 +179,12 @@ var sel = d3.select("#viz")
           .style('background', 'lightgray');
 
 
+names = ['a', 'b', 'c'];
 
+names.forEach(function(element,index){
+  console.log(index + ':' + element); //0: a - how are n,i declared with their designation
+  // ah, .forEach(element, index, array) - it'd be better convention to name them as such
+})
 
 
 
