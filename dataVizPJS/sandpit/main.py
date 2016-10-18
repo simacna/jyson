@@ -97,6 +97,40 @@ from collections import Counter, defaultdict, OrderedDict
 items = ['F', 'C', 'C', 'A', 'B', 'A', 'C', 'E', 'F']
 count = Counter(items) #Counter({'C': 3, 'A': 2, 'F': 2, 'B': 1, 'E': 1})
 
+d = items
+d = defaultdict(int) #instead of throwing a KeyError if a key has no value,
+#the key will instead be set to 0
+print("d before",type( d))
+print(d)
+for item in items:
+  # print("item before", item)
+  d[item] += 1
+  # print("item after", d[item])
+print('====================')
+print("d after", d)
+print(d)
+order = OrderedDict(d)
+# print(order)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
