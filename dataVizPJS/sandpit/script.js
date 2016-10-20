@@ -199,10 +199,25 @@ journeys = [
 
 var groups = _.groupBy(journeys, 'period');
 //console.log(groups);  Object{Morning:Array[3], evening: Array[2]}
-
 var mTimes = _.pluck(groups['morning'], 'times');
-mTimes = _.flatten(mTimes);
+mTimes = _.flatten(mTimes); //flattens a nested array (nesting can be any depth)
 
+//below is my ugly function - answer is correct
+function average(times){
+  // console.log("yo");
+  var i;
+  var sum = 0;
+  for(i=0; i<times.length; i++){
+    sum += times[i];
+  }
+  console.log(sum/(times.length));
+}
+
+//book function
+
+
+
+// average(mTimes);
 
 
 
