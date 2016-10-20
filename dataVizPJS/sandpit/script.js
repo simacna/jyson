@@ -181,10 +181,45 @@ var sel = d3.select("#viz")
 
 names = ['a', 'b', 'c'];
 
-names.forEach(function(element,index){
-  console.log(index + ':' + element); //0: a - how are n,i declared with their designation
-  // ah, .forEach(element, index, array) - it'd be better convention to name them as such
-})
+//forEach is for iterators
+// names.forEach(function(element,index){
+//   console.log(index + ':' + element); //0: a - how are n,i declared with their designation
+//   // ah, .forEach(element, index, array) - it'd be better convention to name them as such
+// });
+
+// console.log('first', _.countBy(names));
+
+journeys = [
+  {period:'morning', times:[44, 34, 56, 31]},
+  {period:'evening', times:[35, 33],},
+  {period:'morning', times:[33, 29, 35, 41]},
+  {period:'evening', times:[24, 45, 27]},
+  {period:'morning', times:[18, 23, 28]}
+];
+
+var groups = _.groupBy(journeys, 'period');
+//console.log(groups);  Object{Morning:Array[3], evening: Array[2]}
+
+var mTimes = _.pluck(groups['morning'], 'times');
+mTimes = _.flatten(mTimes);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
