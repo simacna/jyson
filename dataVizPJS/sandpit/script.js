@@ -214,6 +214,9 @@ function average(times){
 }
 
 //book function
+var ave = function(times){
+  var sum = _.
+}
 
 
 
