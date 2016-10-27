@@ -213,17 +213,26 @@ function average(times){
   console.log(sum/(times.length));
 }
 
-//book function
-var ave = function(times){
-  var sum = _.
+//books version function
+var ave = function(l){
+  var sum = _.reduce(1, function(a,b){return a+b}, 0);
+  return sum/l.length
 }
+
+console.log('avg morning time is' + ave(mTimes));
 
 
 
 // average(mTimes);
 
 
+var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+var sum = nums.filter(function(o){return o%2})
+              .map(function(o){return o*o})
+              .reduce(function(a,b){return a+b});
+
+console.log(sum); //guess output: a largish number
 
 
 
