@@ -229,13 +229,16 @@ console.log('avg morning time is' + ave(mTimes));
 var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 var sum = nums.filter(function(o){return o%2})
-              .map(function(o){return o*o})
-              .reduce(function(a,b){return a+b});
+              .map(function(o){return o*o}) //map creates a new array 
+              .reduce(function(a,b){return a+b}); //reduces to single value from left to right
+ 
+// console.log(sum); //guess output: a largish number
 
-console.log(sum); //guess output: a largish number
 
-
-
+var isOdd = function(x){return x%2;};
+sum = nums.filter(isOdd)
+flat = _.flatten(sum);
+console.log(flat);
 
 
 

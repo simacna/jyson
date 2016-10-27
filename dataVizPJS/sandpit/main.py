@@ -100,19 +100,33 @@ count = Counter(items) #Counter({'C': 3, 'A': 2, 'F': 2, 'B': 1, 'E': 1})
 d = items
 d = defaultdict(int) #instead of throwing a KeyError if a key has no value,
 #the key will instead be set to 0
-print("d before",type( d))
-print(d)
-for item in items:
-  # print("item before", item)
-  d[item] += 1
-  # print("item after", d[item])
-print('====================')
-print("d after", d)
-print(d)
-order = OrderedDict(d)
+# print("d before",type( d))
+# print(d)
+# for item in items:
+#   # print("item before", item)
+#   d[item] += 1
+#   # print("item after", d[item])
+# print('====================')
+# print("d after", d)
+# print(d)
+# order = OrderedDict(d)
 # print(order)
 
 
+nums = range(10)
+odd_squares= [x*x for x in nums if x%2]
+sum(odd_squares)
+
+#best to use named functions to keep things clean
+
+def is_odd(x):
+  return x%2
+
+def sq(x):
+  return x*x
+
+summed = sum([sq(x) for x in nums if is_odd(x)])
+print(summed)
 
 
 
