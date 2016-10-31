@@ -126,7 +126,10 @@ def sq(x):
   return x*x
 
 summed = sum([sq(x) for x in nums if is_odd(x)])
-print(summed)
+# print(summed)
+
+odds = filter(lambda x: x % 2, nums)
+
 
 
 
