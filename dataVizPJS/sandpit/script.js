@@ -234,12 +234,13 @@ var sum = nums.filter(function(o){return o%2})
  
 // console.log(sum); //guess output: a largish number
 
-
 var isOdd = function(x){return x%2;};
 sum = nums.filter(isOdd)
 flat = _.flatten(sum);
 console.log(flat);
-
+flat.forEach(function(a,b){
+  return a+b;
+})
 
 
 

@@ -129,8 +129,11 @@ summed = sum([sq(x) for x in nums if is_odd(x)])
 # print(summed)
 
 odds = filter(lambda x: x % 2, nums)
-
-
+summed = [x**2 for x in odds]
+#another option => summed = map(lambda x: x*x, odds)
+total = filter(lambda x: x + x, summed)
+reduced = reduce(lambda x, y: x+y, summed)
+print(reduced)
 
 
 
