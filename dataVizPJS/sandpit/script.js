@@ -254,12 +254,29 @@ function Counter(inc){
   return add;
 }
 
+// var inc2 = Counter(2);
+// inc2();
+// inc2();
 
+function Car(gas){
+  var gasLevel = gas;
 
+  return {
+    drive : function(){
+      gasLevel -= 2;
+    }, 
+    getGas : function(){
+      gasLevel = 10;
+    },
+    status : function(){
+      return gasLevel;
+    }
+  }
+}
 
-
-
-
+var firstcar = Car(10);
+firstcar.drive();
+// console.log(firstcar.status());
 
 
 
