@@ -243,6 +243,17 @@ flat.forEach(function(a,b){
 })
 
 
+//closure example
+
+function Counter(inc){
+  var count = 0;
+  var add = function(){
+    count += inc;
+    console.log('current count:' + count);
+  }
+  return add;
+}
+
 
 
 
