@@ -278,6 +278,23 @@ var firstcar = Car(10);
 firstcar.drive();
 // console.log(firstcar.status());
 
+function Counter(inc){
+  var count = 0;
+  var api = {};
+  api.add = function(){
+    count += inc;
+    console.log('current count:' + count);
+  }
+  api.sub = function(){
+    count -= inc;
+    console.log('current count:' + count);
+  }
+  api.reset = function(){
+    count = 0;
+    console.log('count reset to 0');
+  }
+  return api;
+}
 
 
 
