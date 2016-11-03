@@ -70,8 +70,8 @@ class Winner(Citizen):
 
 # winner = Winner(c, 'sina', 'chem', 1990)
 # winner = Winner(c, 'sina', 'chem', 1990) -  what is c?
-winner = Winner("Sina", "US", "chem", 1990)
-winner.print_details()
+# winner = Winner("Sina", "US", "chem", 1990)
+# winner.print_details()
 
 #tuple unpacking
 
@@ -133,30 +133,20 @@ summed = [x**2 for x in odds]
 #another option => summed = map(lambda x: x*x, odds)
 total = filter(lambda x: x + x, summed)
 reduced = reduce(lambda x, y: x+y, summed)
-print(reduced)
+# print(reduced)
 
 
 
+#below is code from line 281 in js
+
+def get_counter(inc):
+  vars = {'count': 0}
+  def add():
+    count['dict'] += inc
+    print('current count: ' + str(vars['count']))
+  return add
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+test_counter = get_counter(1)
+test_counter()
+test_counter.add()
