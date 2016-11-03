@@ -296,6 +296,9 @@ function Counter(inc){
   return api;
 }
 
+cntr = Counter(3);
+cntr.add();
+
 
 
 
