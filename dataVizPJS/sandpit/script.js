@@ -297,6 +297,9 @@ function Counter(inc){
 }
 
 cntr = Counter(3);
+// cntr.add();
+// cntr.sub();
+
 
 
 

@@ -148,3 +148,5 @@ def get_counter(inc):
 
 
 
+#BEGINNING OF CHAPTER 3
+
