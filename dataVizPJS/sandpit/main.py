@@ -147,6 +147,4 @@ def get_counter(inc):
   return add
 
 
-test_counter = get_counter(1)
-test_counter()
-test_counter.add()
+
