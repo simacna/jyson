@@ -14,3 +14,9 @@ nobel = [
   'sex': 'female',
   'year': '1911'}
 ]
+
+def n(list):
+  # global nobel
+  return nobel
+
+print(nobel(n))
