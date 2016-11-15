@@ -26,4 +26,4 @@ using explicit import from nw import * gives access to the variable
 
 """
 
-# print(nobel)
+print(nw.nobel())

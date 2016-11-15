@@ -19,4 +19,4 @@ def n(list):
   # global nobel
   return nobel
 
-print(nobel(n))
+#print(n(nobel))
