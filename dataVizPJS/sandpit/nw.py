@@ -1,4 +1,4 @@
-nobel = [
+nobel = {[
  {'category': 'Physics',
   'name': 'Albert Einstein',
   'nationality': 'Swiss',
@@ -13,10 +13,10 @@ nobel = [
   'nationality': 'Polish',
   'sex': 'female',
   'year': '1911'}
-]
+]}
 
-def n(list):
-  global nobel
-  return nobel
+# def n(list):
+#   global nobel
+#   return nobel
 
 #print(n(nobel))
