@@ -22,8 +22,6 @@ import nw
 # from nw import *
 """using import nw doesn't allow for accessing the nobel list vs
 using explicit import from nw import * gives access to the variable
-
-
 """
 
-print(nw.nobel())
+# print(nw.n(nw.nobel)) -- COOL!  

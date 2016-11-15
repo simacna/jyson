@@ -16,7 +16,7 @@ nobel = [
 ]
 
 def n(list):
-  # global nobel
+  global nobel
   return nobel
 
 #print(n(nobel))
