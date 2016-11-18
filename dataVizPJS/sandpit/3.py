@@ -26,7 +26,17 @@ using explicit import from nw import * gives access to the variable
 
 # print(nw.n(nw.nobel)) -- COOL!  
 
-# import json
-# import
-# with open('data/nw.json', 'w') as f:
-#   json.dump(nw.json, f)
+import json
+import datetime
+from dateutil import parser
+from sqlalchemy import create_engine
+# class JSONDateTimeEncorder(json.JSONEncoder):
+#   def default(self, obj):
+#     if isinstance(obj, (datetime.date, datetime.datetime)):
+#       return obj.isoformat()
+#     else:
+#       return json.JSONEncoder.default(self, obj)
+
+#   def
+
+engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
