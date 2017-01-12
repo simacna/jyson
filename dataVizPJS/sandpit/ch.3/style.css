@@ -1,0 +1,40 @@
+body {
+    background: #ccc;
+    font-family: Sans-serif;
+}
+
+div.dev { 1
+    border: solid 1px red;
+}
+
+div.dev div {
+    border: dashed 1px green;
+}
+
+div#chart-holder {
+    width: 600px;
+    background :white;
+    margin: auto;
+    font-size :16px;
+}
+
+div#chart-components {
+    height :400px;
+    position :relative; 2
+}
+
+div#main, div#sidebar {
+    position: absolute; 3
+}
+
+div#main {
+    width: 75%;
+    height: 100%;
+    background: #eee;
+}
+
+div#sidebar {
+    right: 0; 4
+    width: 25%;
+    height: 100%;
+}
