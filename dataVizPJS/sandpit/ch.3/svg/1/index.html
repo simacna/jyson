@@ -24,7 +24,7 @@
   #chart polygon{fill:green;}
 </style>
 
-<svg id='chart' width="300" height="225">
+<svg id='chart' width="300px" height="225">
   <!-- distance from center for x coordinate is 100px
   for y it's 50 px, and radius is 15 -->
   <circle r="15" cx="100" cy="50"></circle>
@@ -33,6 +33,12 @@
   <line x1="20" y1="130" x2="280" y2="130"></line>
   <rect x="240" y="5" width="55" height="30"></rect>
   <polygon points="210,100, 230,100, 220,80"></polygon>
+
+  <text id="title" text-anchor="start" x="150" y="20">
+   ipsum muspi
+  </text>
+  <!-- dy is used for finer adjustments -->
+  <text x='20' y='20' transform='rotate(-90, 30, 10)' text-anchor='end' dy='0.71em'> y axis label </text>
 </svg>
 <!-- <svg width="120" height="120" viewBox="0 0 120 120"
     xmlns="http://www.w3.org/2000/svg">
