@@ -3,7 +3,7 @@ body {
     font-family: Sans-serif;
 }
 
-div.dev { 1
+div.dev { 
     border: solid 1px red;
 }
 
@@ -13,18 +13,18 @@ div.dev div {
 
 div#chart-holder {
     width: 600px;
-    background :white;
+    background: white;
     margin: auto;
     font-size :16px;
 }
 
 div#chart-components {
     height :400px;
-    position :relative; 2
+    position :relative; 
 }
 
 div#main, div#sidebar {
-    position: absolute; 3
+    position: absolute; 
 }
 
 div#main {
@@ -34,7 +34,7 @@ div#main {
 }
 
 div#sidebar {
-    right: 0; 4
+    right: 0; 
     width: 25%;
     height: 100%;
 }
