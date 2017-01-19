@@ -5,13 +5,38 @@
   svg#chart {
   background: lightgray;
   }
+  #chart circle{
+    fill: lightblue;
+    stroke: green;
+    stroke-width: 3px;
+    opacity: 0.9;
+  }
+  /*#chart line{
+    stroke-width:3px;
+    fill: black;
+  }*/
+
+  #chart line{
+    stroke-width: 2;
+    stroke: black;
+  }
 </style>
 
 <svg id='chart' width="300" height="225">
   <!-- distance from center for x coordinate is 100px
   for y it's 50 px, and radius is 15 -->
   <circle r="15" cx="100" cy="50"></circle>
+
+  <line x1="20" y1="20" x2="20" y2="130"/>
+  <line x1="20" y1="130" x2="280" y2="130"></line>
+  <rect x="240" y="5" width="55" height="30"></rect>
 </svg>
+<!-- <svg width="120" height="120" viewBox="0 0 120 120"
+    xmlns="http://www.w3.org/2000/svg">
+
+  <line x1="20" y1="100" x2="100" y2="20"
+      stroke-width="2" stroke="black"/>
+</svg> -->
 
 <!-- Third-party libraries and our JS script. -->
 <script src="http://d3js.org/d3.v3.min.js"></script>
