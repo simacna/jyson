@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <!-- A few CSS style-rules -->
-<style>
+<!-- <style>
   svg#chart {
   background: lightgray;
   }
@@ -23,7 +23,7 @@
   #chart rect {stroke: red; fill:white;}
   #chart polygon{fill:green;}
   #chart path{stroke: red; fill: none;}
-</style>
+</style> -->
 
 <svg id='chart' width="300px" height="225">
   <!-- distance from center for x coordinate is 100px
@@ -62,14 +62,17 @@
 ">  --> 
 </svg>
 </svg>
+
+<!-- common used are rotate, translate, scale -->
+
 <svg id='chart' width="300" height="150">
-  <rect width="20" height="40" transform="translate(60, 55)"
+  <rect width="10" height="10" transform="translate(60, 55)"
         fill='blue'/>
-  <rect width="20" height="40" transform="translate(120, 55),
+  <rect width="20" height="20" transform="translate(120, 55),
         rotate(45)" fill='blue'/>
-  <rect width="20" height="40" transform="translate(180, 55),
+  <rect width="30" height="30" transform="translate(180, 55),
         scale(0.5)" fill='blue'/>
-  <rect width="20" height="40" transform="translate(240, 55),
+  <rect width="40" height="40" transform="translate(240, 55),
         rotate(45),scale(0.5)" fill='blue'/>
 </svg>
 <!-- <svg width="120" height="120" viewBox="0 0 120 120"
@@ -78,6 +81,16 @@
   <line x1="20" y1="100" x2="100" y2="20"
       stroke-width="2" stroke="black"/>
 </svg> -->
+
+<svg id="chart" width-='300' height="150">
+  <g id="shapes" transform='translate(150,75)'>
+    <circle cx='50' cy='0' r='25' fill='red' />
+    <rect x='30' y='10' width='40' height='20' fill='blue' />
+    <!-- <path d='M-20 -10L50 -10L10 60Z' fill='green' /> -->
+    <path d='M-20 -10L50 -10L10 60Z' fill='green' />
+    <circle r='10' fill='yellow'>
+  </g>
+</svg>
 
 <!-- Third-party libraries and our JS script. -->
 <script src="http://d3js.org/d3.v3.min.js"></script>
